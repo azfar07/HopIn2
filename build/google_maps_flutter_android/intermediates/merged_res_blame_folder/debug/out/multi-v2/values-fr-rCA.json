@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\New folder (2)\\ShareMyRide-master-master\\build\\google_maps_flutter_android\\intermediates\\res\\merged\\debug\\values-fr-rCA\\values-fr-rCA.xml",
+            "outputFile": "D:\\New folder (2)\\New folder\\HopIn\\build\\google_maps_flutter_android\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fr-rCA\\values-fr-rCA.xml",
             "map": [
                 {
                     "source": "C:\\Users\\DELL\\.gradle\\caches\\transforms-3\\9712c5b031cdfe8184f99685a6626b60\\transformed\\jetified-play-services-base-18.0.1\\res\\values-fr-rCA\\values.xml",
@@ -57,7 +57,7 @@
             ]
         },
         {
-            "outputFile": "D:\\New folder (2)\\ShareMyRide-master-master\\build\\google_maps_flutter_android\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fr-rCA\\values-fr-rCA.xml",
+            "outputFile": "D:\\New folder (2)\\New folder\\HopIn\\build\\google_maps_flutter_android\\intermediates\\res\\merged\\debug\\values-fr-rCA\\values-fr-rCA.xml",
             "map": [
                 {
                     "source": "C:\\Users\\DELL\\.gradle\\caches\\transforms-3\\9712c5b031cdfe8184f99685a6626b60\\transformed\\jetified-play-services-base-18.0.1\\res\\values-fr-rCA\\values.xml",

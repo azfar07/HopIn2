@@ -1,14 +1,14 @@
 -- Merging decision tree log ---
 application
-INJECTED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\main\AndroidManifest.xml:14:5-40:19
-MERGED from [:firebase_auth] D:\New folder (2)\ShareMyRide-master-master\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-13:19
-MERGED from [:firebase_auth] D:\New folder (2)\ShareMyRide-master-master\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-13:19
-MERGED from [:cloud_firestore] D:\New folder (2)\ShareMyRide-master-master\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-13:19
-MERGED from [:cloud_firestore] D:\New folder (2)\ShareMyRide-master-master\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-13:19
-MERGED from [:firebase_core] D:\New folder (2)\ShareMyRide-master-master\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-13:19
-MERGED from [:firebase_core] D:\New folder (2)\ShareMyRide-master-master\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-13:19
-MERGED from [:geolocator_android] D:\New folder (2)\ShareMyRide-master-master\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:geolocator_android] D:\New folder (2)\ShareMyRide-master-master\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\main\AndroidManifest.xml:14:5-40:19
+MERGED from [:firebase_auth] D:\New folder (2)\New folder\HopIn\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_auth] D:\New folder (2)\New folder\HopIn\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-13:19
+MERGED from [:cloud_firestore] D:\New folder (2)\New folder\HopIn\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-13:19
+MERGED from [:cloud_firestore] D:\New folder (2)\New folder\HopIn\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_core] D:\New folder (2)\New folder\HopIn\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_core] D:\New folder (2)\New folder\HopIn\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-13:19
+MERGED from [:geolocator_android] D:\New folder (2)\New folder\HopIn\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:geolocator_android] D:\New folder (2)\New folder\HopIn\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
 MERGED from [com.google.firebase:firebase-analytics:21.2.0] C:\Users\DELL\.gradle\caches\transforms-3\e4a5e347b5c8cec659a96cca0eeac595\transformed\jetified-firebase-analytics-21.2.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-analytics:21.2.0] C:\Users\DELL\.gradle\caches\transforms-3\e4a5e347b5c8cec659a96cca0eeac595\transformed\jetified-firebase-analytics-21.2.0\AndroidManifest.xml:7:5-20
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\DELL\.gradle\caches\transforms-3\5a19b2852578b2d65c4fc9eb3b8db5bb\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
@@ -60,20 +60,20 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\DE
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.8.0] C:\Users\DELL\.gradle\caches\transforms-3\34165a37d363b0734f481f13b4ae3add\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
 	android:name
-		INJECTED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\main\AndroidManifest.xml
 manifest
-ADDED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\main\AndroidManifest.xml:1:1-41:12
-INJECTED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\main\AndroidManifest.xml:1:1-41:12
-INJECTED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\main\AndroidManifest.xml:1:1-41:12
-INJECTED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\main\AndroidManifest.xml:1:1-41:12
-MERGED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\main\AndroidManifest.xml:1:1-41:12
-MERGED from [:firebase_auth] D:\New folder (2)\ShareMyRide-master-master\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-15:12
-MERGED from [:cloud_firestore] D:\New folder (2)\ShareMyRide-master-master\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-15:12
-MERGED from [:firebase_core] D:\New folder (2)\ShareMyRide-master-master\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-15:12
-MERGED from [:google_maps_flutter_android] D:\New folder (2)\ShareMyRide-master-master\build\google_maps_flutter_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
-MERGED from [:flutter_plugin_android_lifecycle] D:\New folder (2)\ShareMyRide-master-master\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
-MERGED from [:geolocator_android] D:\New folder (2)\ShareMyRide-master-master\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
-MERGED from [:path_provider_android] D:\New folder (2)\ShareMyRide-master-master\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+ADDED from D:\New folder (2)\New folder\HopIn\android\app\src\main\AndroidManifest.xml:1:1-41:12
+INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\main\AndroidManifest.xml:1:1-41:12
+INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\main\AndroidManifest.xml:1:1-41:12
+INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\main\AndroidManifest.xml:1:1-41:12
+MERGED from D:\New folder (2)\New folder\HopIn\android\app\src\main\AndroidManifest.xml:1:1-41:12
+MERGED from [:firebase_auth] D:\New folder (2)\New folder\HopIn\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-15:12
+MERGED from [:cloud_firestore] D:\New folder (2)\New folder\HopIn\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-15:12
+MERGED from [:firebase_core] D:\New folder (2)\New folder\HopIn\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-15:12
+MERGED from [:google_maps_flutter_android] D:\New folder (2)\New folder\HopIn\build\google_maps_flutter_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:flutter_plugin_android_lifecycle] D:\New folder (2)\New folder\HopIn\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:geolocator_android] D:\New folder (2)\New folder\HopIn\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:path_provider_android] D:\New folder (2)\New folder\HopIn\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\DELL\.gradle\caches\transforms-3\b9fe855f6091e04232a8523c248f7729\transformed\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-analytics:21.2.0] C:\Users\DELL\.gradle\caches\transforms-3\e4a5e347b5c8cec659a96cca0eeac595\transformed\jetified-firebase-analytics-21.2.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\DELL\.gradle\caches\transforms-3\19878d107cfad5263d9ece386783538e\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
@@ -126,49 +126,49 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\DELL\.gradle
 MERGED from [io.grpc:grpc-android:1.50.2] C:\Users\DELL\.gradle\caches\transforms-3\21b84a900c9ad9776e1dc3dc8fc9f0dd\transformed\jetified-grpc-android-1.50.2\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\DELL\.gradle\caches\transforms-3\16c05c121ea3530ba3b6e36f8080fa77\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\DELL\.gradle\caches\transforms-3\2e030fd47913a2e1c3a0613b82f6dce4\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
-INJECTED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\debug\AndroidManifest.xml:1:1-7:12
-INJECTED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\debug\AndroidManifest.xml:1:1-7:12
-INJECTED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 	package
-		ADDED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\main\AndroidManifest.xml:2:5-38
-		INJECTED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\main\AndroidManifest.xml
-		INJECTED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\debug\AndroidManifest.xml
+		ADDED from D:\New folder (2)\New folder\HopIn\android\app\src\main\AndroidManifest.xml:2:5-38
+		INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\debug\AndroidManifest.xml
 	android:versionName
-		INJECTED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\main\AndroidManifest.xml
-		ADDED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\main\AndroidManifest.xml:1:1-41:12
-		INJECTED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\debug\AndroidManifest.xml
+		INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\New folder (2)\New folder\HopIn\android\app\src\main\AndroidManifest.xml:1:1-41:12
+		INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\debug\AndroidManifest.xml
 	android:versionCode
-		INJECTED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\main\AndroidManifest.xml
-		ADDED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\main\AndroidManifest.xml:1:1-41:12
-		INJECTED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\debug\AndroidManifest.xml
+		INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\New folder (2)\New folder\HopIn\android\app\src\main\AndroidManifest.xml:1:1-41:12
+		INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\debug\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\main\AndroidManifest.xml:1:11-69
+		ADDED from D:\New folder (2)\New folder\HopIn\android\app\src\main\AndroidManifest.xml:1:11-69
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\main\AndroidManifest.xml:5:3-79
+ADDED from D:\New folder (2)\New folder\HopIn\android\app\src\main\AndroidManifest.xml:5:3-79
 	android:name
-		ADDED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\main\AndroidManifest.xml:5:20-76
+		ADDED from D:\New folder (2)\New folder\HopIn\android\app\src\main\AndroidManifest.xml:5:20-76
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\main\AndroidManifest.xml:8:3-77
+ADDED from D:\New folder (2)\New folder\HopIn\android\app\src\main\AndroidManifest.xml:8:3-77
 	android:name
-		ADDED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\main\AndroidManifest.xml:8:20-74
+		ADDED from D:\New folder (2)\New folder\HopIn\android\app\src\main\AndroidManifest.xml:8:20-74
 uses-sdk
-INJECTED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\main\AndroidManifest.xml
-INJECTED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\main\AndroidManifest.xml
-MERGED from [:firebase_auth] D:\New folder (2)\ShareMyRide-master-master\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:firebase_auth] D:\New folder (2)\ShareMyRide-master-master\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:cloud_firestore] D:\New folder (2)\ShareMyRide-master-master\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:cloud_firestore] D:\New folder (2)\ShareMyRide-master-master\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:firebase_core] D:\New folder (2)\ShareMyRide-master-master\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:firebase_core] D:\New folder (2)\ShareMyRide-master-master\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:google_maps_flutter_android] D:\New folder (2)\ShareMyRide-master-master\build\google_maps_flutter_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:google_maps_flutter_android] D:\New folder (2)\ShareMyRide-master-master\build\google_maps_flutter_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:flutter_plugin_android_lifecycle] D:\New folder (2)\ShareMyRide-master-master\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:flutter_plugin_android_lifecycle] D:\New folder (2)\ShareMyRide-master-master\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:geolocator_android] D:\New folder (2)\ShareMyRide-master-master\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:geolocator_android] D:\New folder (2)\ShareMyRide-master-master\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:path_provider_android] D:\New folder (2)\ShareMyRide-master-master\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:path_provider_android] D:\New folder (2)\ShareMyRide-master-master\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\main\AndroidManifest.xml
+INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\main\AndroidManifest.xml
+MERGED from [:firebase_auth] D:\New folder (2)\New folder\HopIn\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth] D:\New folder (2)\New folder\HopIn\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:cloud_firestore] D:\New folder (2)\New folder\HopIn\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:cloud_firestore] D:\New folder (2)\New folder\HopIn\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core] D:\New folder (2)\New folder\HopIn\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core] D:\New folder (2)\New folder\HopIn\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:google_maps_flutter_android] D:\New folder (2)\New folder\HopIn\build\google_maps_flutter_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:google_maps_flutter_android] D:\New folder (2)\New folder\HopIn\build\google_maps_flutter_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:flutter_plugin_android_lifecycle] D:\New folder (2)\New folder\HopIn\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:flutter_plugin_android_lifecycle] D:\New folder (2)\New folder\HopIn\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:geolocator_android] D:\New folder (2)\New folder\HopIn\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:geolocator_android] D:\New folder (2)\New folder\HopIn\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:path_provider_android] D:\New folder (2)\New folder\HopIn\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:path_provider_android] D:\New folder (2)\New folder\HopIn\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\DELL\.gradle\caches\transforms-3\b9fe855f6091e04232a8523c248f7729\transformed\multidex-2.0.0\AndroidManifest.xml:20:5-43
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\DELL\.gradle\caches\transforms-3\b9fe855f6091e04232a8523c248f7729\transformed\multidex-2.0.0\AndroidManifest.xml:20:5-43
 MERGED from [com.google.firebase:firebase-analytics:21.2.0] C:\Users\DELL\.gradle\caches\transforms-3\e4a5e347b5c8cec659a96cca0eeac595\transformed\jetified-firebase-analytics-21.2.0\AndroidManifest.xml:5:5-44
@@ -273,16 +273,16 @@ MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\DELL\.g
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\DELL\.gradle\caches\transforms-3\16c05c121ea3530ba3b6e36f8080fa77\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\DELL\.gradle\caches\transforms-3\2e030fd47913a2e1c3a0613b82f6dce4\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\DELL\.gradle\caches\transforms-3\2e030fd47913a2e1c3a0613b82f6dce4\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
-INJECTED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\debug\AndroidManifest.xml
-INJECTED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\debug\AndroidManifest.xml
+INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\debug\AndroidManifest.xml
+INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\debug\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\main\AndroidManifest.xml
-		INJECTED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\debug\AndroidManifest.xml
+		INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\debug\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\main\AndroidManifest.xml
-		INJECTED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\debug\AndroidManifest.xml
+		INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\debug\AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\debug\AndroidManifest.xml:6:5-66
+ADDED from D:\New folder (2)\New folder\HopIn\android\app\src\debug\AndroidManifest.xml:6:5-66
 MERGED from [com.google.firebase:firebase-auth:21.1.0] C:\Users\DELL\.gradle\caches\transforms-3\2a4873feb0a55ce7a7ee76e79453388c\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-auth:21.1.0] C:\Users\DELL\.gradle\caches\transforms-3\2a4873feb0a55ce7a7ee76e79453388c\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-firestore:24.4.1] C:\Users\DELL\.gradle\caches\transforms-3\3f0542e0c3ca008e36201731a16c4eab\transformed\jetified-firebase-firestore-24.4.1\AndroidManifest.xml:13:5-67
@@ -300,13 +300,13 @@ MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Us
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] C:\Users\DELL\.gradle\caches\transforms-3\ffd39c62d9c6cbbe5b97aa926d715074\transformed\jetified-play-services-measurement-sdk-api-21.2.0\AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] C:\Users\DELL\.gradle\caches\transforms-3\ffd39c62d9c6cbbe5b97aa926d715074\transformed\jetified-play-services-measurement-sdk-api-21.2.0\AndroidManifest.xml:23:5-67
 	android:name
-		ADDED from D:\New folder (2)\ShareMyRide-master-master\android\app\src\debug\AndroidManifest.xml:6:22-64
+		ADDED from D:\New folder (2)\New folder\HopIn\android\app\src\debug\AndroidManifest.xml:6:22-64
 service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [:firebase_auth] D:\New folder (2)\ShareMyRide-master-master\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-12:19
-MERGED from [:cloud_firestore] D:\New folder (2)\ShareMyRide-master-master\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-12:19
-MERGED from [:cloud_firestore] D:\New folder (2)\ShareMyRide-master-master\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-12:19
-MERGED from [:firebase_core] D:\New folder (2)\ShareMyRide-master-master\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-12:19
-MERGED from [:firebase_core] D:\New folder (2)\ShareMyRide-master-master\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-12:19
+ADDED from [:firebase_auth] D:\New folder (2)\New folder\HopIn\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-12:19
+MERGED from [:cloud_firestore] D:\New folder (2)\New folder\HopIn\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-12:19
+MERGED from [:cloud_firestore] D:\New folder (2)\New folder\HopIn\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_core] D:\New folder (2)\New folder\HopIn\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_core] D:\New folder (2)\New folder\HopIn\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-12:19
 MERGED from [com.google.firebase:firebase-auth:21.1.0] C:\Users\DELL\.gradle\caches\transforms-3\2a4873feb0a55ce7a7ee76e79453388c\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:64:9-70:19
 MERGED from [com.google.firebase:firebase-auth:21.1.0] C:\Users\DELL\.gradle\caches\transforms-3\2a4873feb0a55ce7a7ee76e79453388c\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:64:9-70:19
 MERGED from [com.google.firebase:firebase-firestore:24.4.1] C:\Users\DELL\.gradle\caches\transforms-3\3f0542e0c3ca008e36201731a16c4eab\transformed\jetified-firebase-firestore-24.4.1\AndroidManifest.xml:16:9-22:19
@@ -324,39 +324,39 @@ MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\DELL\.gradle\c
 	android:directBootAware
 		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\DELL\.gradle\caches\transforms-3\b565e29caf0890b8880de251598b23fc\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:34:13-43
 	android:name
-		ADDED from [:firebase_auth] D:\New folder (2)\ShareMyRide-master-master\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:8:18-89
+		ADDED from [:firebase_auth] D:\New folder (2)\New folder\HopIn\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:8:18-89
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar
-ADDED from [:firebase_auth] D:\New folder (2)\ShareMyRide-master-master\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-11:85
+ADDED from [:firebase_auth] D:\New folder (2)\New folder\HopIn\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-11:85
 	android:value
-		ADDED from [:firebase_auth] D:\New folder (2)\ShareMyRide-master-master\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:11:17-82
+		ADDED from [:firebase_auth] D:\New folder (2)\New folder\HopIn\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:11:17-82
 	android:name
-		ADDED from [:firebase_auth] D:\New folder (2)\ShareMyRide-master-master\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:17-124
+		ADDED from [:firebase_auth] D:\New folder (2)\New folder\HopIn\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:17-124
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar
-ADDED from [:cloud_firestore] D:\New folder (2)\ShareMyRide-master-master\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-11:85
+ADDED from [:cloud_firestore] D:\New folder (2)\New folder\HopIn\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-11:85
 	android:value
-		ADDED from [:cloud_firestore] D:\New folder (2)\ShareMyRide-master-master\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:11:17-82
+		ADDED from [:cloud_firestore] D:\New folder (2)\New folder\HopIn\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:11:17-82
 	android:name
-		ADDED from [:cloud_firestore] D:\New folder (2)\ShareMyRide-master-master\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:17-134
+		ADDED from [:cloud_firestore] D:\New folder (2)\New folder\HopIn\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:17-134
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar
-ADDED from [:firebase_core] D:\New folder (2)\ShareMyRide-master-master\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-11:85
+ADDED from [:firebase_core] D:\New folder (2)\New folder\HopIn\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-11:85
 	android:value
-		ADDED from [:firebase_core] D:\New folder (2)\ShareMyRide-master-master\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:11:17-82
+		ADDED from [:firebase_core] D:\New folder (2)\New folder\HopIn\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:11:17-82
 	android:name
-		ADDED from [:firebase_core] D:\New folder (2)\ShareMyRide-master-master\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:17-124
+		ADDED from [:firebase_core] D:\New folder (2)\New folder\HopIn\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:17-124
 uses-permission#android.permission.FOREGROUND_SERVICE
-ADDED from [:geolocator_android] D:\New folder (2)\ShareMyRide-master-master\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-77
+ADDED from [:geolocator_android] D:\New folder (2)\New folder\HopIn\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-77
 	android:name
-		ADDED from [:geolocator_android] D:\New folder (2)\ShareMyRide-master-master\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:7:22-74
+		ADDED from [:geolocator_android] D:\New folder (2)\New folder\HopIn\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:7:22-74
 service#com.baseflow.geolocator.GeolocatorLocationService
-ADDED from [:geolocator_android] D:\New folder (2)\ShareMyRide-master-master\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:56
+ADDED from [:geolocator_android] D:\New folder (2)\New folder\HopIn\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:56
 	android:enabled
-		ADDED from [:geolocator_android] D:\New folder (2)\ShareMyRide-master-master\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-35
+		ADDED from [:geolocator_android] D:\New folder (2)\New folder\HopIn\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-35
 	android:exported
-		ADDED from [:geolocator_android] D:\New folder (2)\ShareMyRide-master-master\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
+		ADDED from [:geolocator_android] D:\New folder (2)\New folder\HopIn\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
 	android:foregroundServiceType
-		ADDED from [:geolocator_android] D:\New folder (2)\ShareMyRide-master-master\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-53
+		ADDED from [:geolocator_android] D:\New folder (2)\New folder\HopIn\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-53
 	android:name
-		ADDED from [:geolocator_android] D:\New folder (2)\ShareMyRide-master-master\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-77
+		ADDED from [:geolocator_android] D:\New folder (2)\New folder\HopIn\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-77
 uses-library#androidx.window.extensions
 ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\DELL\.gradle\caches\transforms-3\5a19b2852578b2d65c4fc9eb3b8db5bb\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
 	android:required

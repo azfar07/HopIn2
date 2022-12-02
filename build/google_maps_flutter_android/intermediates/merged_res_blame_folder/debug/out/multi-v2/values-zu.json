@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\New folder (2)\\ShareMyRide-master-master\\build\\google_maps_flutter_android\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zu\\values-zu.xml",
+            "outputFile": "D:\\New folder (2)\\New folder\\HopIn\\build\\google_maps_flutter_android\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zu\\values-zu.xml",
             "map": [
                 {
                     "source": "C:\\Users\\DELL\\.gradle\\caches\\transforms-3\\5d83f4e118ff2042cce67b4ec218c5c6\\transformed\\jetified-play-services-basement-18.0.0\\res\\values-zu\\values.xml",
@@ -57,7 +57,7 @@
             ]
         },
         {
-            "outputFile": "D:\\New folder (2)\\ShareMyRide-master-master\\build\\google_maps_flutter_android\\intermediates\\res\\merged\\debug\\values-zu\\values-zu.xml",
+            "outputFile": "D:\\New folder (2)\\New folder\\HopIn\\build\\google_maps_flutter_android\\intermediates\\res\\merged\\debug\\values-zu\\values-zu.xml",
             "map": [
                 {
                     "source": "C:\\Users\\DELL\\.gradle\\caches\\transforms-3\\5d83f4e118ff2042cce67b4ec218c5c6\\transformed\\jetified-play-services-basement-18.0.0\\res\\values-zu\\values.xml",

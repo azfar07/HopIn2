@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\New folder (2)\\ShareMyRide-master-master\\build\\flutter_plugin_android_lifecycle\\intermediates\\res\\merged\\debug\\values-en-rIN\\values-en-rIN.xml",
+            "outputFile": "D:\\New folder (2)\\New folder\\HopIn\\build\\flutter_plugin_android_lifecycle\\intermediates\\res\\merged\\debug\\values-en-rIN\\values-en-rIN.xml",
             "map": [
                 {
                     "source": "C:\\Users\\DELL\\.gradle\\caches\\transforms-3\\eea5f82b5790149678fb04eb894e9d0c\\transformed\\core-1.6.0\\res\\values-en-rIN\\values-en-rIN.xml",
@@ -16,7 +16,7 @@
             ]
         },
         {
-            "outputFile": "D:\\New folder (2)\\ShareMyRide-master-master\\build\\flutter_plugin_android_lifecycle\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rIN\\values-en-rIN.xml",
+            "outputFile": "D:\\New folder (2)\\New folder\\HopIn\\build\\flutter_plugin_android_lifecycle\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rIN\\values-en-rIN.xml",
             "map": [
                 {
                     "source": "C:\\Users\\DELL\\.gradle\\caches\\transforms-3\\eea5f82b5790149678fb04eb894e9d0c\\transformed\\core-1.6.0\\res\\values-en-rIN\\values-en-rIN.xml",

@@ -1,34 +1,70 @@
 {
   "project_info": {
-    "project_number": "89872132049",
-    "firebase_url": "https://sharemyride-1f480.firebaseio.com",
-    "project_id": "sharemyride-1f480",
-    "storage_bucket": "sharemyride-1f480.appspot.com"
+    "project_number": "833758349293",
+    "project_id": "carpool-da7e1",
+    "storage_bucket": "carpool-da7e1.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:89872132049:android:4f63b2d0e598d8e8fa22f0",
+        "mobilesdk_app_id": "1:833758349293:android:a17c36bca73a990e3a09e4",
         "android_client_info": {
-          "package_name": "gr.sharemyride.flutter_app"
+          "package_name": "com.example.carpool"
         }
       },
       "oauth_client": [
         {
-          "client_id": "89872132049-1igj3goqs58euvlv9hsvmo2o8i0sml4f.apps.googleusercontent.com",
+          "client_id": "833758349293-7ckcpmu2t2h275g0i8m5og3kchabrdlm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.carpool",
+            "certificate_hash": "b7bfce13d6ebe2df4acfe02b8f484aa983a8fd5d"
+          }
+        },
+        {
+          "client_id": "833758349293-kvg7l3aih1oj6t8o9qlghf1e6c19afph.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBr82Dlp0YDhiFSYhX7jG8MhtJj80XAMiw"
+          "current_key": "AIzaSyAMM96WChip8xeMT_7zOpeUoRR7fZcb7-8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "89872132049-1igj3goqs58euvlv9hsvmo2o8i0sml4f.apps.googleusercontent.com",
+              "client_id": "833758349293-kvg7l3aih1oj6t8o9qlghf1e6c19afph.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:833758349293:android:8704f5cfb5a47bb93a09e4",
+        "android_client_info": {
+          "package_name": "gr.sharemyride.flutter_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "833758349293-kvg7l3aih1oj6t8o9qlghf1e6c19afph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMM96WChip8xeMT_7zOpeUoRR7fZcb7-8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "833758349293-kvg7l3aih1oj6t8o9qlghf1e6c19afph.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
