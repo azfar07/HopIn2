@@ -1024,7 +1024,7 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
       width: MediaQuery.of(context).size.width,
       child: GoogleMap(
         initialCameraPosition:
-            CameraPosition(target: LatLng(37.9838, 23.7275), zoom: 15),
+            CameraPosition(target: LatLng(33.6844, 73.0479), zoom: 10),
         zoomControlsEnabled: false,
         myLocationEnabled: true,
         tiltGesturesEnabled: true,
