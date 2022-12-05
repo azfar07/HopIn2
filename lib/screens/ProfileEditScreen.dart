@@ -146,6 +146,7 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'HopIn',
       themeMode: ThemeMode.system,
       theme: themes.lighttheme,

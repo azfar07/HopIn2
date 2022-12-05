@@ -71,6 +71,7 @@ class _MyAppState extends State<MyApp> {
         return SystemNavigator.pop();
       },
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         themeMode: ThemeMode.system,
         theme: themes.lighttheme,
         darkTheme: themes.darktheme,

@@ -312,6 +312,7 @@ class _RidesScreenState extends State<RidesScreen> {
     this.completedList = [];
     organizeUserRidesInCategories(userRides, context);
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'HopIn',
       themeMode: ThemeMode.system,
       theme: themes.lighttheme,

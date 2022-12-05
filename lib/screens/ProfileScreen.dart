@@ -83,6 +83,7 @@ class ProfileScreen extends StatelessWidget {
         UserModel userModel, Future<List<ReviewModel>> futureReviews) {
       //addReviewCards(reviews);
       return MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'HopIn',
         themeMode: ThemeMode.system,
         theme: themes.lighttheme,

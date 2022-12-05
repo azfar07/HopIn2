@@ -70,6 +70,7 @@ MERGED from D:\New folder (2)\New folder\HopIn\android\app\src\main\AndroidManif
 MERGED from [:firebase_auth] D:\New folder (2)\New folder\HopIn\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:cloud_firestore] D:\New folder (2)\New folder\HopIn\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:firebase_core] D:\New folder (2)\New folder\HopIn\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-15:12
+MERGED from [:permission_handler_android] D:\New folder (2)\New folder\HopIn\build\permission_handler_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:google_maps_flutter_android] D:\New folder (2)\New folder\HopIn\build\google_maps_flutter_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:flutter_plugin_android_lifecycle] D:\New folder (2)\New folder\HopIn\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:geolocator_android] D:\New folder (2)\New folder\HopIn\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
@@ -160,6 +161,8 @@ MERGED from [:cloud_firestore] D:\New folder (2)\New folder\HopIn\build\cloud_fi
 MERGED from [:cloud_firestore] D:\New folder (2)\New folder\HopIn\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] D:\New folder (2)\New folder\HopIn\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] D:\New folder (2)\New folder\HopIn\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:permission_handler_android] D:\New folder (2)\New folder\HopIn\build\permission_handler_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:permission_handler_android] D:\New folder (2)\New folder\HopIn\build\permission_handler_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:google_maps_flutter_android] D:\New folder (2)\New folder\HopIn\build\google_maps_flutter_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:google_maps_flutter_android] D:\New folder (2)\New folder\HopIn\build\google_maps_flutter_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:flutter_plugin_android_lifecycle] D:\New folder (2)\New folder\HopIn\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44

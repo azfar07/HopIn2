@@ -115,6 +115,7 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         themeMode: ThemeMode.system,
         theme: themes.lighttheme,
         darkTheme: themes.darktheme,
@@ -142,7 +143,8 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
       visible: isVisible,
       child: Stack(
         children: <Widget>[
-          SizedBox(
+          Container(
+            margin: EdgeInsets.only(top: 50),
             height: 250.0,
             child: ListView(
               children: <Widget>[

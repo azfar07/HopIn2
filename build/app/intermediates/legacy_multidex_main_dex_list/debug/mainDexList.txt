@@ -139,6 +139,9 @@ androidx/versionedparcelable/VersionedParcelize.class
 androidx/viewpager/widget/ViewPager$DecorView.class
 androidx/window/core/ExperimentalWindowApi.class
 androidx/window/embedding/SplitRule$LayoutDir.class
+com/baseflow/permissionhandler/PermissionConstants$PermissionGroup.class
+com/baseflow/permissionhandler/PermissionConstants$PermissionStatus.class
+com/baseflow/permissionhandler/PermissionConstants$ServiceStatus.class
 com/google/android/gms/auth/api/phone/SmsCodeAutofillClient$PermissionState.class
 com/google/android/gms/common/GmsSignatureVerifier.class
 com/google/android/gms/common/GoogleSignatureVerifier.class

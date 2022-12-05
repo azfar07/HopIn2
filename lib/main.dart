@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/models/UserModel.dart';
 import 'package:flutter_app/screens/AuthScreen.dart';
 import 'package:flutter_app/screens/HomeScreen.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'screens/ProfileScreen.dart';
 import 'screens/RidesScreen.dart';
 import 'services/fakeDB.dart';
@@ -14,6 +15,7 @@ void main() async {
   HttpOverrides.global = MyHttpOverrides();
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+
   runApp(Welcome());
 }
 
@@ -21,6 +23,7 @@ class Welcome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: AuthScreen(),
     );
   }

@@ -41,6 +41,7 @@ dependencies:
   geoflutterfire2: ^2.3.14
   datetime_picker_formfield_new: ^2.0.0
   flutter_rating_bar: ^4.0.1
+  permission_handler: ^10.2.0
   
 
 dev_dependencies:

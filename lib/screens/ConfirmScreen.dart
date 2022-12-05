@@ -8,6 +8,7 @@ class ConfirmScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'HopIn',
         themeMode: ThemeMode.system,
         theme: themes.lighttheme,
