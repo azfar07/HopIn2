@@ -91,9 +91,9 @@ class RidesModel {
     );
   }
 
-  String toJson() => json.encode(toMap());
+  //String toJson() => json.encode(toMap());
 
-  static RidesModel fromJson(String source) => fromMap(json.decode(source));
+  //static RidesModel fromJson(String source) => fromMap(json.decode(source));
 
   @override
   String toString() {

@@ -1,37 +1,23 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/models/themes.dart';
 import 'package:flutter_app/services/DataBase.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_app/models/ReviewModel.dart';
 import 'package:flutter_app/models/UserModel.dart';
 import 'package:flutter_app/screens/ProfileEditScreen.dart';
 import 'package:flutter_app/widgets/ReviewCard.dart';
 
-class ProfileScreen extends StatefulWidget {
+class ProfileScreen extends StatelessWidget {
   final DataBase db;
 
   ProfileScreen({
     @required this.db,
   });
 
-  @override
-  State<ProfileScreen> createState() => _ProfileScreenState();
-}
-
-class _ProfileScreenState extends State<ProfileScreen> {
-  @override
   Future<UserModel> futureUser;
-
   Future<List<ReviewModel>> futureReviews;
-
   //List<Widget> reviewWidgetList = [];
+
   var darkBlueColor = Color.fromRGBO(26, 26, 48, 1.0);
-
   var lightBlueColor = Colors.blue;
-
   var lightGreyBackground = Color.fromRGBO(229, 229, 229, 1.0);
 
   List<Widget> reviewCardsWidgetsFromList(List<ReviewModel> reviews) {
@@ -48,25 +34,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return reviewWidgetList;
   }
 
-  getnumber() async {
-    var phone = FirebaseAuth.instance.currentUser.uid;
-    await FirebaseFirestore.instance
-        .collection('UserModel')
-        .where('phone', isEqualTo: phone.toString())
-        .get()
-        .then((value) {
-      value.docs.forEach((element) {
-        users.name = element['name'];
-        users.carinfo = element['carInfo'];
-        users.phone = element['phone'];
-        users.email = element['email'];
-        users.gender = element['gender'] as Gender;
-        users.rating = element['rating'];
-      });
-    });
-    // setState(() {});
-  }
-
   double getRatingAverage(List<ReviewModel> reviewsList) {
     if (reviewsList.isEmpty) {
       return 0.0;
@@ -81,20 +48,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }
 
   void getDataFromDb() {
-    futureUser = widget.db.getCurrentUserModel();
-    futureReviews = widget.db.getCurrentUserReviews();
+    futureUser = db.getCurrentUserModel();
+    futureReviews = db.getCurrentUserReviews();
   }
 
   void printReviewList() async {
-    List reviews = await widget.db.getCurrentUserReviews();
+    List reviews = await db.getCurrentUserReviews();
     print('!!!!REVIEWS IN DB:   $reviews');
-  }
-
-  @override
-  void initState() {
-    getnumber();
-    super.initState();
-    setState(() {});
   }
 
   @override
@@ -110,42 +70,38 @@ class _ProfileScreenState extends State<ProfileScreen> {
       carInfo: 'waiting...',
     );
     UserModel errorUser = UserModel(
-      name: users.name,
-      gender: users.gender,
-      phone: users.phone,
-      email: users.email,
-      rating: users.rating,
-      carInfo: users.carinfo,
+      name: 'ERROR',
+      gender: Gender.nonBinary,
+      phone: 'ERROR',
+      email: 'ERROR',
+      rating: 0.0,
+      carInfo: 'ERROR',
     );
 
     Widget userScreen(
         UserModel userModel, Future<List<ReviewModel>> futureReviews) {
       //addReviewCards(reviews);
       return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        themeMode: ThemeMode.system,
-        theme: themes.lighttheme,
-        darkTheme: themes.darktheme,
-        title: 'HopIn',
-        // theme: ThemeData(
-        //         scaffoldBackgroundColor: Colors.white,
-        //         primaryColor: darkBlueColor,
-        //         secondaryHeaderColor: lightBlueColor,
-        //         //cardColor: lightGreyBackground,
-        //         textTheme: TextTheme(
-        //           bodyText1: TextStyle(
-        //             color: darkBlueColor,
-        //             fontFamily: 'fira',
-        //             fontSize: 14.0,
-        //           ),
-        //           headline2: TextStyle(
-        //             color: darkBlueColor,
-        //             fontFamily: 'fira',
-        //             fontSize: 16.0,
-        //           ),
-        //         ),
-        //       )
-
+        title: 'ShareMyRide',
+        theme: ThemeData(
+          scaffoldBackgroundColor: Colors.white,
+          primaryColor: darkBlueColor,
+          //cardColor: lightGreyBackground,
+          textTheme: TextTheme(
+            bodyText1: TextStyle(
+              color: darkBlueColor,
+              fontFamily: 'fira',
+              fontSize: 14.0,
+            ),
+            subtitle1: TextStyle(
+              color: darkBlueColor,
+              fontFamily: 'fira',
+              fontSize: 16.0,
+            ),
+          ),
+          colorScheme:
+              ColorScheme.fromSwatch().copyWith(secondary: lightBlueColor),
+        ),
         home: Scaffold(
           body: SafeArea(
             child: SingleChildScrollView(
@@ -164,7 +120,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => ProfileEditScreen(
-                                          db: this.widget.db,
+                                          db: this.db,
                                           isNewUser: false,
                                         )),
                               );
@@ -197,10 +153,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         padding: EdgeInsets.only(right: 5.0),
                         child: Text(
                           'My Rating:',
-                          style: GoogleFonts.oswald(
-                              textStyle: TextStyle(
+                          style: TextStyle(
                             fontSize: 15.0,
-                          )),
+                          ),
                         ),
                       ),
                       Container(
@@ -217,21 +172,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     print('We have rating!!!');
                                     return Text(
                                       getRatingAverage(snapshot.data)
-                                          .toString()
-                                          .substring(0, 3),
-                                      style: GoogleFonts.oswald(
-                                          textStyle: TextStyle(
+                                          .toString(),
+                                      style: TextStyle(
                                         fontSize: 15.0,
-                                      )),
+                                      ),
                                     );
                                   } else if (snapshot.hasError) {
                                     print('error');
                                     return Text(
                                       'error',
-                                      style: GoogleFonts.oswald(
-                                          textStyle: TextStyle(
+                                      style: TextStyle(
                                         fontSize: 15.0,
-                                      )),
+                                      ),
                                     );
                                   } else {
                                     //waiting...

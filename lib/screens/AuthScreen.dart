@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/models/themes.dart';
 import 'package:flutter_app/screens/LoginScreen.dart';
 import 'package:flutter_app/screens/MyApp.dart';
 import 'package:flutter_app/services/Authenticator.dart';
@@ -63,30 +62,11 @@ class _AuthScreenState extends State<AuthScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.system,
-      theme: themes.lighttheme,
-      darkTheme: themes.darktheme,
-      // theme: ThemeData(
-      //   scaffoldBackgroundColor:
-      //       ThemeMode.system == ThemeMode.dark ? Colors.black : Colors.white,
-      // ),
-      home: Scaffold(
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'HopIn',
-                style: TextStyle(fontSize: 50),
-              ),
-              Text(
-                'Traveling made easy',
-                style: TextStyle(fontSize: 50, color: Colors.redAccent),
-              ),
-            ],
-          ),
+    return Scaffold(
+      body: Center(
+        child: SpinKitPumpingHeart(
+          color: Colors.redAccent,
+          size: 100.0,
         ),
       ),
     );

@@ -46,7 +46,7 @@
         android:label="HopIn" >
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBmrYhVUtVcKX7z55kfqZ5hBrWzF8XQzYs" />
+            android:value="AIzaSyCxMyTrtIYIDw27UbQHKpjbVNlPqGjHR88" />
 
         <activity
             android:name="com.example.flutter_app.MainActivity"

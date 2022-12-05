@@ -1,14 +1,11 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/models/RidesModel.dart';
 import 'package:flutter_app/models/UserModel.dart';
 import 'package:flutter_app/models/UserRide.dart';
-import 'package:flutter_app/models/themes.dart';
 import 'package:flutter_app/screens/AuthScreen.dart';
 import 'package:flutter_app/screens/MyApp.dart';
 import 'package:flutter_app/screens/ProfileScreen.dart';
 import 'package:flutter_app/services/DataBase.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_app/services/fakeDB.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:toast/toast.dart';
@@ -61,21 +58,19 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
       if (widget.isNewUser) {
         // check if phone, name,etc are null-> show a toast
         if (this.name == null || this.email == null || this.carInfo == null) {
-          Toast.show("Error, please fill all the fields");
-          // Fluttertoast.showToast(
-          //   msg: "Error, please fill all the fields",
-          //   timeInSecForIosWeb: 1,
-          // );
+          ToastContext().init(context);
+          Toast.show(
+            "Error, please fill all the fields",
+          );
         } else {
           //This is where a new UserModel get created
           //Identifier should be phone so i pass UUID to phone number
           UserModel user = UserModel(
             name: this.name,
             gender: this.gender,
-            phone: FirebaseAuth.instance.currentUser.uid,
+            phone: await widget.db.auth.getCurrentFireBaseUserID(),
             email: this.email,
             carInfo: this.carInfo,
-            id: FirebaseAuth.instance.currentUser.uid,
             rating: 0.0,
           );
           var result = widget.db.createUserModel(user);
@@ -148,28 +143,19 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
   }
 
   @override
-  void initState() {
-    ToastContext().init(context);
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'HopIn',
-      debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.system,
-      theme: themes.lighttheme,
-      darkTheme: themes.darktheme,
-      // theme: ThemeData(
-      //   scaffoldBackgroundColor: Colors.white,
-      //   primaryColor: darkBlueColor,
-      //   accentColor: lightBlueColor,
-      //   //cardColor: lightGreyBackground,
-      //   textTheme: TextTheme(
-      //     bodyText1: TextStyle(color: Color.fromRGBO(26, 26, 48, 1.0)),
-      //   ),
-      // ),
+      title: 'ShareMyRide',
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+        primaryColor: darkBlueColor,
+        //cardColor: lightGreyBackground,
+        textTheme: TextTheme(
+          bodyText1: TextStyle(color: Color.fromRGBO(26, 26, 48, 1.0)),
+        ),
+        colorScheme:
+            ColorScheme.fromSwatch().copyWith(secondary: lightBlueColor),
+      ),
       home: Scaffold(
         body: SafeArea(
           child: SingleChildScrollView(
@@ -215,10 +201,9 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
                       padding: EdgeInsets.fromLTRB(15.0, 25.0, 0.0, 0.0),
                       child: Text(
                         'Personal Info',
-                        style: GoogleFonts.oswald(
-                            textStyle: TextStyle(
+                        style: TextStyle(
                           fontSize: 20.0,
-                        )),
+                        ),
                       ),
                     ),
                   ],
@@ -305,10 +290,9 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
                       padding: EdgeInsets.fromLTRB(15.0, 25.0, 0.0, 0.0),
                       child: Text(
                         'Car Info',
-                        style: GoogleFonts.oswald(
-                            textStyle: TextStyle(
+                        style: TextStyle(
                           fontSize: 20.0,
-                        )),
+                        ),
                       ),
                     ),
                   ],
@@ -326,11 +310,6 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
                 ),
                 Container(
                   child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30.0)),
-                      backgroundColor: Colors.red[700],
-                    ),
                     onPressed: () async {
                       //delete user
                       print("deleting user...");
@@ -348,6 +327,11 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
                         color: Colors.white,
                         fontSize: 15.0,
                       ),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0)),
+                      backgroundColor: Colors.red[700],
                     ),
                   ),
                 ),

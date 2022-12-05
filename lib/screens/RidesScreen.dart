@@ -2,13 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/models/RidesModel.dart';
 import 'package:flutter_app/models/UserModel.dart';
 import 'package:flutter_app/models/UserRide.dart';
-import 'package:flutter_app/models/themes.dart';
 import 'package:flutter_app/screens/MyApp.dart';
 import 'package:flutter_app/screens/ProfileScreen.dart';
 import 'package:flutter_app/screens/ReviewsScreen.dart';
 import 'package:flutter_app/services/DataBase.dart';
 import 'package:flutter_app/widgets/ReviewCard.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_app/models/ReviewModel.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -217,21 +215,6 @@ class _RidesScreenState extends State<RidesScreen> {
           if (showDetails) {
             switch (status) {
               case 'myRides':
-                this.showMyRides = true;
-                break;
-              case 'pending':
-                this.showPending = true;
-                break;
-              case 'confirmed':
-                this.showConfirmed = true;
-                break;
-              case 'completed':
-                this.showCompleted = true;
-                break;
-            }
-          } else {
-            switch (status) {
-              case 'myRides':
                 this.showMyRides = false;
                 break;
               case 'pending':
@@ -242,6 +225,21 @@ class _RidesScreenState extends State<RidesScreen> {
                 break;
               case 'completed':
                 this.showCompleted = false;
+                break;
+            }
+          } else {
+            switch (status) {
+              case 'myRides':
+                this.showMyRides = true;
+                break;
+              case 'pending':
+                this.showPending = true;
+                break;
+              case 'confirmed':
+                this.showConfirmed = true;
+                break;
+              case 'completed':
+                this.showCompleted = true;
                 break;
             }
           }
@@ -264,16 +262,16 @@ class _RidesScreenState extends State<RidesScreen> {
           if (showDetails) {
             switch (status) {
               case 'myRides':
-                this.showMyRides = true;
+                this.showMyRides = false;
                 break;
               case 'pending':
-                this.showPending = true;
+                this.showPending = false;
                 break;
               case 'confirmed':
-                this.showConfirmed = true;
+                this.showConfirmed = false;
                 break;
               case 'completed':
-                this.showCompleted = true;
+                this.showCompleted = false;
                 break;
             }
           } else {
@@ -313,29 +311,26 @@ class _RidesScreenState extends State<RidesScreen> {
     this.completedList = [];
     organizeUserRidesInCategories(userRides, context);
     return MaterialApp(
-      title: 'HopIn',
-      debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.system,
-      theme: themes.lighttheme,
-      darkTheme: themes.darktheme,
-      // theme: ThemeData(
-      //   scaffoldBackgroundColor: Colors.white,
-      //   primaryColor: darkBlueColor,
-      //   accentColor: lightBlueColor,
-      //   cardColor: lightGreyBackground,
-      //   textTheme: TextTheme(
-      //     bodyText1: TextStyle(
-      //       color: darkBlueColor,
-      //       fontFamily: 'fira',
-      //       fontSize: 12.0,
-      //     ),
-      //     headline2: TextStyle(
-      //       color: darkBlueColor,
-      //       fontFamily: 'fira',
-      //       fontSize: 16.0,
-      //     ),
-      //   ),
-      // ),
+      title: 'ShareMyRide',
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+        primaryColor: darkBlueColor,
+        //cardColor: lightGreyBackground,
+        textTheme: TextTheme(
+          bodyText1: TextStyle(
+            color: darkBlueColor,
+            fontFamily: 'fira',
+            fontSize: 12.0,
+          ),
+          subtitle1: TextStyle(
+            color: darkBlueColor,
+            fontFamily: 'fira',
+            fontSize: 16.0,
+          ),
+        ),
+        colorScheme:
+            ColorScheme.fromSwatch().copyWith(secondary: lightBlueColor),
+      ),
       home: Scaffold(
         floatingActionButton: FloatingActionButton(
           onPressed: () {
@@ -767,10 +762,9 @@ class _RidesScreenState extends State<RidesScreen> {
                         padding: EdgeInsets.only(right: 5.0),
                         child: Text(
                           'Rating:',
-                          style: GoogleFonts.oswald(
-                              textStyle: TextStyle(
+                          style: TextStyle(
                             fontSize: 15.0,
-                          )),
+                          ),
                         ),
                       ),
                       Container(
@@ -782,10 +776,9 @@ class _RidesScreenState extends State<RidesScreen> {
                               getRatingAverage(reviews)
                                   .toString()
                                   .substring(0, 3),
-                              style: GoogleFonts.oswald(
-                                  textStyle: TextStyle(
+                              style: TextStyle(
                                 fontSize: 15.0,
-                              )),
+                              ),
                             ),
                             Icon(
                               Icons.star,

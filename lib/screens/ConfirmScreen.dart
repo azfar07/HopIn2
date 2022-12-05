@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/models/themes.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class ConfirmScreen extends StatelessWidget {
   var darkBlueColor = Color.fromRGBO(26, 26, 48, 1.0);
@@ -9,21 +7,17 @@ class ConfirmScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'HopIn',
-        debugShowCheckedModeBanner: false,
-        themeMode: ThemeMode.system,
-        theme: themes.lighttheme,
-        darkTheme: themes.darktheme,
-        // theme: ThemeData(
-        //   scaffoldBackgroundColor: Colors.white,
-        //   primaryColor: darkBlueColor,
-        //   //cardColor: lightGreyBackground,
-        //   textTheme: TextTheme(
-        //     bodyText1: TextStyle(color: Color.fromRGBO(26, 26, 48, 1.0)),
-        //   ),
-        //   colorScheme:
-        //       ColorScheme.fromSwatch().copyWith(secondary: lightBlueColor),
-        // ),
+        title: 'ShareMyRide',
+        theme: ThemeData(
+          scaffoldBackgroundColor: Colors.white,
+          primaryColor: darkBlueColor,
+          //cardColor: lightGreyBackground,
+          textTheme: TextTheme(
+            bodyText1: TextStyle(color: Color.fromRGBO(26, 26, 48, 1.0)),
+          ),
+          colorScheme:
+              ColorScheme.fromSwatch().copyWith(secondary: lightBlueColor),
+        ),
         home: Scaffold(
           body: SafeArea(
             child: SafeArea(
@@ -35,9 +29,8 @@ class ConfirmScreen extends StatelessWidget {
                       margin: EdgeInsets.symmetric(
                           vertical: 25.0, horizontal: 10.0),
                       child: Text(
-                        "HopIn",
-                        style: GoogleFonts.pacifico(
-                            textStyle: TextStyle(fontSize: 50.0)),
+                        "Share My Ride",
+                        style: TextStyle(fontSize: 50.0),
                         textAlign: TextAlign.center,
                       ),
                     ),

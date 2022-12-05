@@ -10,6 +10,7 @@ class Authenticator {
       result = await _auth.signInAnonymously();
       //AuthResult.user type=FireBaseUser
     } catch (e) {
+      print(e + '...............................');
       result = null;
     }
     return result;

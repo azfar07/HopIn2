@@ -73,7 +73,6 @@ MERGED from [:firebase_core] D:\New folder (2)\New folder\HopIn\build\firebase_c
 MERGED from [:google_maps_flutter_android] D:\New folder (2)\New folder\HopIn\build\google_maps_flutter_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:flutter_plugin_android_lifecycle] D:\New folder (2)\New folder\HopIn\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:geolocator_android] D:\New folder (2)\New folder\HopIn\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
-MERGED from [:path_provider_android] D:\New folder (2)\New folder\HopIn\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\DELL\.gradle\caches\transforms-3\b9fe855f6091e04232a8523c248f7729\transformed\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-analytics:21.2.0] C:\Users\DELL\.gradle\caches\transforms-3\e4a5e347b5c8cec659a96cca0eeac595\transformed\jetified-firebase-analytics-21.2.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\DELL\.gradle\caches\transforms-3\19878d107cfad5263d9ece386783538e\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
@@ -123,9 +122,9 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\DELL\.gradle\cac
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\DELL\.gradle\caches\transforms-3\56b48997c8087ffcb800b7323b27172a\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\DELL\.gradle\caches\transforms-3\366163c297b6095ad45631afea95b2b4\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\DELL\.gradle\caches\transforms-3\fb53c5e5bd5d90b5617e88fc065caf8c\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
-MERGED from [io.grpc:grpc-android:1.50.2] C:\Users\DELL\.gradle\caches\transforms-3\21b84a900c9ad9776e1dc3dc8fc9f0dd\transformed\jetified-grpc-android-1.50.2\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\DELL\.gradle\caches\transforms-3\16c05c121ea3530ba3b6e36f8080fa77\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\DELL\.gradle\caches\transforms-3\2e030fd47913a2e1c3a0613b82f6dce4\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
+MERGED from [io.grpc:grpc-android:1.50.2] C:\Users\DELL\.gradle\caches\transforms-3\21b84a900c9ad9776e1dc3dc8fc9f0dd\transformed\jetified-grpc-android-1.50.2\AndroidManifest.xml:2:1-11:12
 INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\debug\AndroidManifest.xml:1:1-7:12
@@ -167,8 +166,6 @@ MERGED from [:flutter_plugin_android_lifecycle] D:\New folder (2)\New folder\Hop
 MERGED from [:flutter_plugin_android_lifecycle] D:\New folder (2)\New folder\HopIn\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:geolocator_android] D:\New folder (2)\New folder\HopIn\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:geolocator_android] D:\New folder (2)\New folder\HopIn\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:path_provider_android] D:\New folder (2)\New folder\HopIn\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:path_provider_android] D:\New folder (2)\New folder\HopIn\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\DELL\.gradle\caches\transforms-3\b9fe855f6091e04232a8523c248f7729\transformed\multidex-2.0.0\AndroidManifest.xml:20:5-43
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\DELL\.gradle\caches\transforms-3\b9fe855f6091e04232a8523c248f7729\transformed\multidex-2.0.0\AndroidManifest.xml:20:5-43
 MERGED from [com.google.firebase:firebase-analytics:21.2.0] C:\Users\DELL\.gradle\caches\transforms-3\e4a5e347b5c8cec659a96cca0eeac595\transformed\jetified-firebase-analytics-21.2.0\AndroidManifest.xml:5:5-44
@@ -267,12 +264,12 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\DELL\.gradle\caches\transforms
 MERGED from [androidx.print:print:1.0.0] C:\Users\DELL\.gradle\caches\transforms-3\366163c297b6095ad45631afea95b2b4\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\DELL\.gradle\caches\transforms-3\fb53c5e5bd5d90b5617e88fc065caf8c\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\DELL\.gradle\caches\transforms-3\fb53c5e5bd5d90b5617e88fc065caf8c\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
-MERGED from [io.grpc:grpc-android:1.50.2] C:\Users\DELL\.gradle\caches\transforms-3\21b84a900c9ad9776e1dc3dc8fc9f0dd\transformed\jetified-grpc-android-1.50.2\AndroidManifest.xml:5:5-7:41
-MERGED from [io.grpc:grpc-android:1.50.2] C:\Users\DELL\.gradle\caches\transforms-3\21b84a900c9ad9776e1dc3dc8fc9f0dd\transformed\jetified-grpc-android-1.50.2\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\DELL\.gradle\caches\transforms-3\16c05c121ea3530ba3b6e36f8080fa77\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\DELL\.gradle\caches\transforms-3\16c05c121ea3530ba3b6e36f8080fa77\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\DELL\.gradle\caches\transforms-3\2e030fd47913a2e1c3a0613b82f6dce4\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\DELL\.gradle\caches\transforms-3\2e030fd47913a2e1c3a0613b82f6dce4\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
+MERGED from [io.grpc:grpc-android:1.50.2] C:\Users\DELL\.gradle\caches\transforms-3\21b84a900c9ad9776e1dc3dc8fc9f0dd\transformed\jetified-grpc-android-1.50.2\AndroidManifest.xml:5:5-7:41
+MERGED from [io.grpc:grpc-android:1.50.2] C:\Users\DELL\.gradle\caches\transforms-3\21b84a900c9ad9776e1dc3dc8fc9f0dd\transformed\jetified-grpc-android-1.50.2\AndroidManifest.xml:5:5-7:41
 INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\debug\AndroidManifest.xml
 INJECTED from D:\New folder (2)\New folder\HopIn\android\app\src\debug\AndroidManifest.xml
 	android:targetSdkVersion

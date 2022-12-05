@@ -1,4 +1,0 @@
-#Wed Nov 30 08:25:24 PST 2022
-base.0=D\:\\New folder (2)\\ShareMyRide-master-master\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
-renamed.0=classes.dex
-path.0=classes.dex

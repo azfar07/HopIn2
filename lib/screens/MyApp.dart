@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_app/models/UserModel.dart';
-import 'package:flutter_app/models/themes.dart';
 import 'package:flutter_app/screens/HomeScreen.dart';
 import 'package:flutter_app/screens/ProfileScreen.dart';
 import 'package:flutter_app/screens/RidesScreen.dart';
@@ -71,33 +70,22 @@ class _MyAppState extends State<MyApp> {
         return SystemNavigator.pop();
       },
       child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        themeMode: ThemeMode.system,
-        theme: themes.lighttheme,
-        darkTheme: themes.darktheme,
-        // theme: ThemeData(
-        //   fontFamily: 'fira',
-        //   textTheme: TextTheme(
-        //     bodyText1: TextStyle(
-        //       fontFamily: 'fira',
-        //     ),
-        //   ),
-        // ),
+        theme: ThemeData(
+          fontFamily: 'fira',
+          textTheme: TextTheme(
+            bodyText1: TextStyle(
+              fontFamily: 'fira',
+            ),
+          ),
+        ),
         home: Scaffold(
           bottomNavigationBar: BottomNavigationBar(
             items: const <BottomNavigationBarItem>[
+              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'HOME'),
               BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                label: 'HOME',
-              ),
+                  icon: Icon(Icons.drive_eta), label: 'RIDES'),
               BottomNavigationBarItem(
-                icon: Icon(Icons.drive_eta),
-                label: 'RIDES',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.account_circle),
-                label: 'PROFILE',
-              ),
+                  icon: Icon(Icons.account_circle), label: 'PROFILE'),
             ],
             currentIndex: _selectedIndex,
             selectedItemColor: Colors.blue,

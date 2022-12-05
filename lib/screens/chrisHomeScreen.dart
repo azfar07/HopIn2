@@ -1,5 +1,3 @@
-// ignore_for_file: unnecessary_statements
-
 import 'package:datetime_picker_formfield_new/datetime_picker_formfield_new.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -7,20 +5,19 @@ import 'package:flutter_app/models/RidesModel.dart';
 import 'package:flutter_app/models/SearchModel.dart';
 import 'package:flutter_app/models/UserModel.dart';
 import 'package:flutter_app/models/UserRide.dart';
-import 'package:flutter_app/models/themes.dart';
 import 'package:geocoder2/geocoder2.dart';
 import 'package:geoflutterfire2/geoflutterfire2.dart';
 import 'dart:async';
-import 'package:search_map_place_updated/search_map_place_updated.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:flutter_polyline_points/flutter_polyline_points.dart';
-import 'package:flutter/services.dart' show HapticFeedback, rootBundle;
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:intl/intl.dart';
 import 'package:flutter_app/widgets/RideResultCard.dart';
 import 'package:flutter_app/widgets/ReviewCard.dart';
 import 'package:flutter_app/models/ReviewModel.dart';
 import 'package:flutter_app/services/fakeDB.dart';
 import 'package:flutter_app/services/DataBase.dart';
+import 'package:search_map_place_updated/search_map_place_updated.dart';
 import 'package:toast/toast.dart';
 
 import 'MyApp.dart';
@@ -42,11 +39,9 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
   double _destLatitude, _destLongitude;
   Map<MarkerId, Marker> markers = {};
   Map<PolylineId, Polyline> polylines = {};
-  // Map<PolylineId, Polyline> polylines2 = RidesModel().randPoints.asMap;
   List<LatLng> polylineCoordinates = [];
   PolylinePoints polylinePoints = PolylinePoints();
   String _googleAPiKey = "AIzaSyBmrYhVUtVcKX7z55kfqZ5hBrWzF8XQzYs";
-  //"AIzaSyCxMyTrtIYIDw27UbQHKpjbVNlPqGjHR88";
   String mapStyle;
   Completer<GoogleMapController> _controller = Completer();
 
@@ -89,7 +84,7 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
       toText: 'to',
       randPoints: [new LatLng(38.236785, 23.94523)],
       toLatLng: new LatLng(37.236785, 23.44523),
-      dateTime: new DateTime(2022),
+      dateTime: new DateTime(2020),
       driver: fakeUser);
   List<ReviewModel> detailsReviewList = [
     reviewModel,
@@ -105,7 +100,6 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
 
   @override
   void initState() {
-    ToastContext().init(context);
     _loadMapStyle();
     super.initState();
   }
@@ -123,56 +117,45 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
   }
 
   Widget homeScaffold() {
-    return SafeArea(
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        themeMode: ThemeMode.system,
-        theme: themes.lighttheme,
-        darkTheme: themes.darktheme,
-        home: Scaffold(
-          resizeToAvoidBottomInset: false,
-          body: Stack(
-            children: <Widget>[
-              _googleMap(context),
-              _startingScreen(showStartingScreen),
-              _resultsScreen(showResults, currentUser.name, rideSearchResults),
-              _detailsScreen(showDetails, detailsRide, detailsReviewList),
-              _createScreen(showCreate),
-              _pickUpPointScreen(showPickUpPoints)
-            ],
-          ),
-        ),
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      body: Stack(
+        children: <Widget>[
+          _googleMap(context),
+          _startingScreen(showStartingScreen),
+          _resultsScreen(showResults, currentUser.name, rideSearchResults),
+          _detailsScreen(showDetails, detailsRide, detailsReviewList),
+          _createScreen(showCreate),
+          _pickUpPointScreen(showPickUpPoints)
+        ],
       ),
     );
   }
 
   Widget _startingScreen(bool isVisible) {
     return Visibility(
-      visible: true,
+      visible: isVisible,
       child: Stack(
         children: <Widget>[
-          Container(
-            margin: EdgeInsets.only(top: 50),
-            child: SizedBox(
-              height: 250.0,
-              child: ListView(
-                children: <Widget>[
-                  _fillField(
-                      "From: ",
-                      Colors.blue,
-                      10.0,
-                      BitmapDescriptor.defaultMarkerWithHue(
-                        BitmapDescriptor.hueBlue,
-                      )),
-                  _fillField(
-                      "To: ",
-                      Colors.red,
-                      10.0,
-                      BitmapDescriptor.defaultMarkerWithHue(
-                          BitmapDescriptor.hueRed)),
-                  _dateField(),
-                ],
-              ),
+          SizedBox(
+            height: 250.0,
+            child: ListView(
+              children: <Widget>[
+                _fillField(
+                    "From: ",
+                    Colors.blue,
+                    10.0,
+                    BitmapDescriptor.defaultMarkerWithHue(
+                      BitmapDescriptor.hueBlue,
+                    )),
+                _fillField(
+                    "To: ",
+                    Colors.red,
+                    10.0,
+                    BitmapDescriptor.defaultMarkerWithHue(
+                        BitmapDescriptor.hueRed)),
+                _dateField(),
+              ],
             ),
           ),
           _customButton(Alignment.bottomRight, 80.0, Icons.search, "Search",
@@ -195,12 +178,12 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
               // The language of the autocompletion
               language: 'en',
               placeholder: str,
-              icon: const IconData(0xe55f, fontFamily: 'MaterialIcons'),
+              icon: IconData(0xe55f, fontFamily: 'MaterialIcons'),
               iconColor: clr,
               // The position used to give better recommendations. In this case we are using the user position
               location: LatLng(37.9931036, 23.7301123),
               radius: 30000,
-              onSelected: (place) async {
+              onSelected: (Place place) async {
                 final geolocation = await place.geolocation;
                 placeCords = geolocation.coordinates;
                 _mapController
@@ -254,7 +237,7 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
                       borderSide: BorderSide.none,
                       borderRadius: BorderRadius.circular(5.0)),
                   //suffixIcon: Icon(Icons.calendar_today, color: Colors.black,),
-                  fillColor: Colors.blue,
+                  fillColor: Colors.white,
                   labelText: "Date: ",
                   labelStyle: TextStyle(color: Colors.black)),
               onShowPicker: (context, currentValue) async {
@@ -319,8 +302,6 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
 
   //the method called when the user presses the search button
   _onSearchPressed() async {
-    showResults = true;
-
     _clearPolylines();
     _clearMarkers();
     if (_areFieldsFilled()) {
@@ -347,21 +328,20 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
       _convertPolylineToRandPoints();
       randPoints.add(startCords);
       setState(() {
-        showStartingScreen = true;
+        showStartingScreen = false;
         showCreate = true;
         isTouchable = true;
         _mapController
-            .animateCamera(CameraUpdate.newLatLngZoom(startCords, 11));
+            .animateCamera(CameraUpdate.newLatLngZoom(startCords, 15));
       });
     }
-    setState(() {});
   } //onCreatePressed
 
   _getUserDataFromDB() async {
     this.currentUser = await widget.db.getCurrentUserModel();
     var userReviews = await widget.db.getCurrentUserReviews();
     //update rating on db ??? Do we need that?
-    await widget.db.updateCurrentUserRating(userReviews);
+    widget.db.updateCurrentUserRating(userReviews);
     //update local user rating value. This should be used on ride used by confirmed button
     double getRatingAverage(List<ReviewModel> reviewsList) {
       if (reviewsList.isEmpty) {
@@ -381,7 +361,6 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
   }
 
   bool _areFieldsFilled() {
-    ToastContext().init(context);
     if (from == "") {
       _showToast("Missing 'From' field!");
       return false;
@@ -406,7 +385,8 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
   }
 
   _showToast(String message) {
-    Toast.show(message);
+    ToastContext().init(context);
+    Toast.show('$message');
   }
 
   Widget _createScreen(bool isVisible) {
@@ -449,53 +429,55 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
 
   _onFinishPressed() {
     showDialog(
-        builder: (context) => new AlertDialog(
-              title: new Text('Ride Overview'),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(10.0))),
-              content: new SizedBox(
-                //height: 300,
-                child: Column(
-                  children: <Widget>[
-                    Text(
-                      'From: $from',
-                      style: TextStyle(fontSize: 18.0),
-                    ),
-                    Text(
-                      'To: $to',
-                      style: TextStyle(fontSize: 18.0),
-                    ),
-                    Text(
-                      'Date: $dateTime',
-                      style: TextStyle(fontSize: 18.0),
-                    ),
-                    Text(
-                      'Selected rendezvous points:',
-                      style: TextStyle(fontSize: 18.0),
-                    ),
-                    Text(_showSelectedPoints())
-                  ],
-                ),
-              ),
-              actions: [
-                TextButton(
-                  child: Text("I'm not done yet"),
-                  onPressed: () {
-                    Navigator.of(context, rootNavigator: true).pop('dialog');
-                  },
-                ),
-                TextButton(
-                  child: Text("Confirm"),
-                  onPressed: () {
-                    Navigator.of(context, rootNavigator: true).pop('dialog');
-                    _showToast("Ride Successfully created!");
-                    _onConfirmPressed();
-                  },
-                ),
-              ],
-            ),
         context: context,
-        barrierDismissible: true);
+        barrierDismissible: true,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: new Text('Ride Overview'),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(10.0))),
+            content: new SizedBox(
+              //height: 300,
+              child: Column(
+                children: <Widget>[
+                  Text(
+                    'From: $from',
+                    style: TextStyle(fontSize: 18.0),
+                  ),
+                  Text(
+                    'To: $to',
+                    style: TextStyle(fontSize: 18.0),
+                  ),
+                  Text(
+                    'Date: $dateTime',
+                    style: TextStyle(fontSize: 18.0),
+                  ),
+                  Text(
+                    'Selected rendezvous points:',
+                    style: TextStyle(fontSize: 18.0),
+                  ),
+                  Text(_showSelectedPoints())
+                ],
+              ),
+            ),
+            actions: [
+              TextButton(
+                child: Text("I'm not done yet"),
+                onPressed: () {
+                  Navigator.of(context, rootNavigator: true).pop('dialog');
+                },
+              ),
+              TextButton(
+                child: Text("Confirm"),
+                onPressed: () {
+                  Navigator.of(context, rootNavigator: true).pop('dialog');
+                  _showToast("Ride Successfully created!");
+                  _onConfirmPressed();
+                },
+              ),
+            ],
+          );
+        });
   }
 
   _onConfirmPressed() async {
@@ -542,10 +524,7 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
   String _showSelectedPoints() {
     String result = "";
     if (selectedPoints.isEmpty)
-      // result = "None";
-      for (final x in selectedPoints) {
-        result += x + "\n";
-      }
+      result = "None";
     else {
       for (final x in selectedPoints) {
         result += x + "\n";
@@ -652,7 +631,8 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
   } //list items
 
   _showRideDetails(RidesModel ridesModel) async {
-    this.detailsReviewList = detailsReviewList =
+    //this.detailsReviewList = await
+    detailsReviewList =
         await widget.db.getUserReviewsFromPhone(ridesModel.driver.phone);
     setState(() {
       showResults = false;
@@ -661,7 +641,7 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
     });
   }
 
-  _requestRideFinal() async {
+  _requestRideFinal() {
     //create two userRides/
     //pass it to UserRide of the currentUser
     var currentUserRide = UserRide(
@@ -674,7 +654,7 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
       isFinished: false,
     );
     //create waiting pending for this currentUser
-    var result = await widget.db.createUserRide(currentUserRide);
+    var result = widget.db.createUserRide(currentUserRide);
     if (result == null) {
       print('couldnt create a current user Ride');
     } else {
@@ -689,7 +669,7 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
         fellowTraveler: this.currentUser,
         randPoint: pickUpPoint,
         isFinished: false);
-    var result2 = await widget.db.createUserRide(driverUserRide);
+    var result2 = widget.db.createUserRide(driverUserRide);
     if (result2 == null) {
       print('couldnt create a new driver user Ride');
     } else {
@@ -905,9 +885,9 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
                         height: 2,
                       ),
                       ElevatedButton(
-                        onPressed: () async {
-                          await _requestRideFinal();
-                          await _selectPickUpPoint(ride);
+                        onPressed: () {
+                          //_requestRideFinal();
+                          _selectPickUpPoint(ride);
                         },
                         child: Text(
                           "Select Pick-Up Point",
@@ -949,11 +929,8 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
   }
 
   _selectPickUpPoint(RidesModel ride) async {
-    setState(() {
-      showDetails = false;
-      showPickUpPoints = true;
-    });
-
+    showDetails = false;
+    showPickUpPoints = true;
     if (!(polylines.containsKey(PolylineId(ride.driver.name)))) {
       _originLatitude = ride.randPoints[0].latitude;
       _originLongitude = ride.randPoints[0].longitude;
@@ -983,40 +960,42 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
     _clearMarkers();
     _clearPolylines();
     showDialog(
-        builder: (context) => new AlertDialog(
-              title: Text('Request Ride Successful!'),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(10.0))),
-              content: Column(
-                children: <Widget>[
-                  SizedBox(
-                    height: 10.0,
-                  ),
-                  Text(
-                      "You are waiting for confirmation.\nCheck your Rides tab."),
-                  SizedBox(
-                    height: 10.0,
-                  ),
-                  Image(
-                    image: new AssetImage('assets/images/check_img.png'),
-                  ),
-                ],
-              ),
-              actions: [
-                TextButton(
-                  child: Text('YAY!'),
-                  onPressed: () {
-                    Navigator.of(context, rootNavigator: true).pop('dialog');
-                    _requestRideFinal();
-                    setState(() {
-                      showResults = true;
-                    });
-                  },
+        context: context,
+        barrierDismissible: true,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text('Request Ride Successful!'),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(10.0))),
+            content: Column(
+              children: <Widget>[
+                SizedBox(
+                  height: 10.0,
+                ),
+                Text(
+                    "You are waiting for confirmation.\nCheck your Rides tab."),
+                SizedBox(
+                  height: 10.0,
+                ),
+                Image(
+                  image: new AssetImage('assets/images/check_img.png'),
                 ),
               ],
             ),
-        context: context,
-        barrierDismissible: true);
+            actions: [
+              TextButton(
+                child: Text('YAY!'),
+                onPressed: () {
+                  Navigator.of(context, rootNavigator: true).pop('dialog');
+                  _requestRideFinal();
+                  setState(() {
+                    showResults = true;
+                  });
+                },
+              ),
+            ],
+          );
+        });
   }
 
   List<Widget> _getReviews(List<ReviewModel> list) {
@@ -1030,9 +1009,6 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
     return reviews;
   }
 
-  Marker orig;
-  Marker dest;
-
   //Google map related methods
 
   Widget _googleMap(BuildContext context) {
@@ -1040,43 +1016,16 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
       height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
       child: GoogleMap(
-        mapToolbarEnabled: false,
         initialCameraPosition:
-            CameraPosition(target: LatLng(33.6505996, 73.0390684), zoom: 11.5),
+            CameraPosition(target: LatLng(37.9838, 23.7275), zoom: 15),
         zoomControlsEnabled: false,
         myLocationEnabled: true,
-        tiltGesturesEnabled: false,
-        mapType: MapType.normal,
-        compassEnabled: false,
+        tiltGesturesEnabled: true,
+        compassEnabled: true,
         scrollGesturesEnabled: true,
         zoomGesturesEnabled: true,
         onMapCreated: onMapCreated,
-        onLongPress: (argument) async {
-          if (orig == null || (orig != null && dest != null)) {
-            orig = Marker(
-                infoWindow: const InfoWindow(title: 'origin'),
-                markerId: const MarkerId('origin'),
-                icon: BitmapDescriptor.defaultMarkerWithHue(
-                    BitmapDescriptor.hueGreen),
-                position: argument);
-            HapticFeedback.heavyImpact();
-            startCords = orig.position;
-
-            dest = null;
-            setState(() {});
-          } else {
-            dest = Marker(
-                infoWindow: const InfoWindow(title: 'destination'),
-                markerId: const MarkerId('destination'),
-                icon: BitmapDescriptor.defaultMarkerWithHue(
-                    BitmapDescriptor.hueBlue),
-                position: argument);
-            HapticFeedback.heavyImpact();
-            endCords = dest.position;
-            setState(() {});
-          }
-        },
-        markers: {if (orig != null) orig, if (dest != null) dest},
+        markers: Set<Marker>.of(markers.values),
         polylines: Set<Polyline>.of(polylines.values),
         onTap: _onMapTap,
       ),
@@ -1092,32 +1041,34 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
   void _showPointDialog(LatLng point) async {
     final String name = await _getAddressFromLatLng(point);
     showDialog(
-        builder: (context) => new AlertDialog(
-              title: new Text('Add this rendezvous point?'),
-              content: new Text(name),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(10.0))),
-              actions: [
-                TextButton(
-                  child: Text('No'),
-                  onPressed: () {
-                    Navigator.of(context, rootNavigator: true).pop('dialog');
-                  },
-                ),
-                TextButton(
-                  child: Text('Yes'),
-                  onPressed: () {
-                    _showRendezvousPoint(name, point, false);
-                    randPoints.add(point);
-                    selectedPoints.add(name);
-                    setState(() {});
-                    Navigator.of(context, rootNavigator: true).pop('dialog');
-                  },
-                ),
-              ],
+      context: context,
+      barrierDismissible: false,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: new Text('Add this rendezvous point?'),
+          content: new Text(name),
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(10.0))),
+          actions: [
+            TextButton(
+              child: Text('No'),
+              onPressed: () {
+                Navigator.of(context, rootNavigator: true).pop('dialog');
+              },
             ),
-        context: context,
-        barrierDismissible: false);
+            TextButton(
+              child: Text('Yes'),
+              onPressed: () {
+                _showRendezvousPoint(name, point, false);
+                randPoints.add(point);
+                selectedPoints.add(name);
+                Navigator.of(context, rootNavigator: true).pop('dialog');
+              },
+            ),
+          ],
+        );
+      },
+    );
   }
 
   Future<String> _getAddressFromLatLng(LatLng point) async {
@@ -1125,9 +1076,9 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
     var address = await Geocoder2.getDataFromCoordinates(
         latitude: coordinates.latitude,
         longitude: coordinates.longitude,
-        googleMapApiKey: _googleAPiKey);
-    var first = address.address;
-    String name = first;
+        googleMapApiKey: 'AIzaSyBmrYhVUtVcKX7z55kfqZ5hBrWzF8XQzYs');
+    var first = address;
+    String name = first.address;
     return name;
   }
 
@@ -1140,32 +1091,33 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
         if (selectOn) {
           final String address = await _getAddressFromLatLng(point);
           showDialog(
-              builder: (context) => new AlertDialog(
-                    title: new Text('Select this pick-up point?'),
-                    content: new Text(address),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(10.0))),
-                    actions: [
-                      TextButton(
-                        child: Text('No'),
-                        onPressed: () {
-                          Navigator.of(context, rootNavigator: true)
-                              .pop('dialog');
-                        },
-                      ),
-                      TextButton(
-                        child: Text('Yes'),
-                        onPressed: () {
-                          pickUpPoint = point;
-                          Navigator.of(context, rootNavigator: true)
-                              .pop('dialog');
-                          _onPickUpPointSelected();
-                        },
-                      ),
-                    ],
+            context: context,
+            barrierDismissible: true,
+            builder: (BuildContext context) {
+              return AlertDialog(
+                title: new Text('Select this pick-up point?'),
+                content: new Text(address),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                actions: [
+                  TextButton(
+                    child: Text('No'),
+                    onPressed: () {
+                      Navigator.of(context, rootNavigator: true).pop('dialog');
+                    },
                   ),
-              context: context,
-              barrierDismissible: true);
+                  TextButton(
+                    child: Text('Yes'),
+                    onPressed: () {
+                      pickUpPoint = point;
+                      Navigator.of(context, rootNavigator: true).pop('dialog');
+                      _onPickUpPointSelected();
+                    },
+                  ),
+                ],
+              );
+            },
+          );
         }
       },
       infoWindow: new InfoWindow(title: title),
@@ -1188,14 +1140,11 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
 
   // method that creates the polyline given the from and to geolocation
   _getPolyline(String name) async {
-    PointLatLng p1 = PointLatLng(_originLatitude, _originLongitude);
-    PointLatLng p2 = PointLatLng(_destLatitude, _destLongitude);
-    PolylineResult result = (await polylinePoints.getRouteBetweenCoordinates(
-      _googleAPiKey,
-      p1,
-      p2,
-    ));
-    if (result.status.isEmpty) {
+    PointLatLng po = PointLatLng(_originLatitude, _originLongitude);
+    PointLatLng pd = PointLatLng(_destLatitude, _destLongitude);
+    PolylineResult result =
+        await polylinePoints.getRouteBetweenCoordinates(_googleAPiKey, po, pd);
+    if (result.points.isNotEmpty) {
       result.points.forEach((PointLatLng point) {
         polylineCoordinates.add(LatLng(point.latitude, point.longitude));
       });
@@ -1204,7 +1153,6 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
     Polyline polyline = Polyline(
         polylineId: id, color: Colors.blue, points: polylineCoordinates);
     polylines[id] = polyline;
-
     setState(() {});
   }
 

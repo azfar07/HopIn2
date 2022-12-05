@@ -1,7 +1,6 @@
 //import 'dart:html';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_app/models/ReviewModel.dart';
 import 'package:flutter_app/models/RidesModel.dart';
 import 'package:flutter_app/models/SearchModel.dart';
@@ -31,15 +30,15 @@ class DataBase {
   Future<UserModel> getCurrentUserModel() async {
     UserModel generatedUserModel;
     var userCollection = db.collection(Paths.UserModel);
-    String currentUser = FirebaseAuth.instance.currentUser.uid;
+    String currentUser = await auth.getCurrentFireBaseUserID();
     var query = userCollection.where('phone', isEqualTo: currentUser);
     var remoteDoc = await query.get();
     List results = [];
     for (var i in remoteDoc.docs) {
-      //Map result = i.data;
+      //Map result = i.data();
       results.add(i.data());
     }
-    generatedUserModel = UserModel.fromMap(results.first);
+    generatedUserModel = UserModel.fromMap(results[0]);
     if (currentUser == 'NoUserYet') {
       generatedUserModel = UserModel(
         name: 'No User Yet :(',
@@ -61,7 +60,7 @@ class DataBase {
     var remoteDoc = await query.get();
     List results = [];
     for (var i in remoteDoc.docs) {
-      //Map result = i.data;
+      //Map result = i.data();
       ReviewModel review = ReviewModel.fromMap(i.data());
       generetedList.add(review);
     }
@@ -115,7 +114,7 @@ class DataBase {
     var remoteDoc = await query.get();
     List results = [];
     for (var i in remoteDoc.docs) {
-      //Map result = i.data;
+      //Map result = i.data();
       ReviewModel review = ReviewModel.fromMap(i.data());
       generetedList.add(review);
     }
@@ -138,9 +137,7 @@ class DataBase {
     DocumentReference docRef;
     var userRideCollection = db.collection(Paths.UserRide);
     try {
-      docRef = await userRideCollection
-          .add(userRide.toMap())
-          .then((value) => docRef = value);
+      docRef = await userRideCollection.add(userRide.toMap());
     } catch (e) {
       docRef = null;
     }
@@ -162,10 +159,7 @@ class DataBase {
     DocumentReference docRef;
     var reviewModelCollection = db.collection(Paths.RidesModel);
     try {
-      docRef = await FirebaseFirestore.instance
-          .collection(Paths.RidesModel)
-          .add(ride.toMap())
-          .then((value) => docRef = value);
+      docRef = await reviewModelCollection.add(ride.toMap());
     } catch (e) {
       docRef = null;
     }
@@ -345,7 +339,7 @@ class DataBase {
     var query = userCollection.where('phone', isEqualTo: currentUser);
     var remoteDoc = await query.get();
     for (var i in remoteDoc.docs) {
-      Map result = i.data();
+      //Map result = i.data();
       try {
         i.reference.update(userData);
       } on Exception catch (e) {
@@ -375,8 +369,8 @@ class DataBase {
     var remoteDoc = await query.get();
     List results = [];
     for (var i in remoteDoc.docs) {
-      //Map result = i.data;
-      //results.add(i.data);
+      //Map result = i.data();
+      //results.add(i.data());
       try {
         i.reference.update({'rating': averageRating});
       } on Exception catch (e) {
@@ -437,7 +431,7 @@ class DataBase {
     String authId = await auth.getCurrentFireBaseUserID();
     var messageList = await db.collection('UserModel').get();
     for (var i in messageList.docs) {
-      var senderEntry = i['name'];
+      var senderEntry = i.data()['name'];
       if (senderEntry == authId) {
         result = i.data();
       }

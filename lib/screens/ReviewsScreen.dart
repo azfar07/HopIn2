@@ -2,14 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/models/ReviewModel.dart';
 import 'package:flutter_app/models/UserModel.dart';
 import 'package:flutter_app/models/UserRide.dart';
-import 'package:flutter_app/models/themes.dart';
 import 'package:flutter_app/screens/MyApp.dart';
 import 'package:flutter_app/services/DataBase.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:toast/toast.dart';
 
-class ReviewsScreen extends StatefulWidget {
+class ReviewsScreen extends StatelessWidget {
   final DataBase db;
   final UserRide ride;
   final UserModel myUser;
@@ -17,54 +15,40 @@ class ReviewsScreen extends StatefulWidget {
 
   ReviewsScreen({this.db, this.ride, this.reviewee, this.myUser});
 
-  @override
-  State<ReviewsScreen> createState() => _ReviewsScreenState();
-}
-
-class _ReviewsScreenState extends State<ReviewsScreen> {
   final Color darkBlueColor = Color.fromRGBO(26, 26, 48, 1.0);
-
   final Color lightBlueColor = Colors.blue;
-
   final Color lightGreyBackground = Color.fromRGBO(229, 229, 229, 1.0);
-
+  //
   //
   double revRating;
-
   String reviewText;
-  @override
-  void initState() {
-    ToastContext().init(context);
-    super.initState();
-  }
 
   // i need url,name, AND PHONE from card(reviewee)
+  //and
+  //myUserModel to create ReviewModel
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'HopIn',
-      debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.system,
-      theme: themes.lighttheme,
-      darkTheme: themes.darktheme,
-      // theme: ThemeData(
-      //   scaffoldBackgroundColor: Colors.white,
-      //   primaryColor: darkBlueColor,
-      //   accentColor: lightBlueColor,
-      //   //cardColor: lightGreyBackground,
-      //   textTheme: TextTheme(
-      //     bodyText1: TextStyle(
-      //       color: darkBlueColor,
-      //       fontFamily: 'fira',
-      //       fontSize: 12.0,
-      //     ),
-      //     headline2: TextStyle(
-      //       color: darkBlueColor,
-      //       fontFamily: 'fira',
-      //       fontSize: 16.0,
-      //     ),
-      //   ),
-      // ),
+      title: 'ShareMyRide',
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+        primaryColor: darkBlueColor,
+        accentColor: lightBlueColor,
+        //cardColor: lightGreyBackground,
+        textTheme: TextTheme(
+          bodyText1: TextStyle(
+            color: darkBlueColor,
+            fontFamily: 'fira',
+            fontSize: 12.0,
+          ),
+          subtitle1: TextStyle(
+            color: darkBlueColor,
+            fontFamily: 'fira',
+            fontSize: 16.0,
+          ),
+        ),
+      ),
       home: Scaffold(
         body: SafeArea(
           child: SingleChildScrollView(
@@ -79,7 +63,7 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
                         context,
                         MaterialPageRoute(
                             builder: (context) => MyApp(
-                                  db: widget.db,
+                                  db: db,
                                   selectedIndex: 1,
                                 )),
                       );
@@ -90,21 +74,20 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
                   padding: EdgeInsets.only(top: 20.0),
                   child: CircleAvatar(
                       radius: 60.0,
-                      backgroundImage: new NetworkImage(widget.reviewee
-                          .getUrlFromNameHash(
-                              genderInput: widget.reviewee.gender))),
+                      backgroundImage: new NetworkImage(reviewee
+                          .getUrlFromNameHash(genderInput: reviewee.gender))),
                 ),
                 Container(
                   padding: EdgeInsets.only(top: 10.0),
                   child: Text(
-                    widget.reviewee.name,
+                    reviewee.name,
                     style: TextStyle(
                       fontSize: 32.0,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
                 ),
-                RatingBar(
+                RatingBar.builder(
                   initialRating: 3,
                   minRating: 1,
                   direction: Axis.horizontal,
@@ -116,7 +99,12 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
                     revRating = rating;
                     print(rating);
                   },
-                  ratingWidget: null,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Icon(
+                      Icons.star,
+                      color: Colors.amber,
+                    );
+                  },
                 ),
                 Container(
                   padding: EdgeInsets.only(left: 20.0, right: 20.0, top: 20.0),
@@ -137,24 +125,21 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
                   child: ElevatedButton(
                     onPressed: () async {
                       if (revRating == null && reviewText == null) {
-                        Toast.show('Please re-enter a valid rating and/or text')
-                            // Fluttertoast.showToast(
-                            //   msg: 'Please re-enter a valid rating and/or text',
-                            //   timeInSecForIosWeb: 1,
-                            // )
-                            ;
+                        ToastContext().init(context);
+                        Toast.show(
+                          'Please re-enter a valid rating and/or text',
+                        );
                       } else {
                         var review = ReviewModel(
-                          phone: widget.reviewee.phone,
-                          name: widget.myUser.name,
-                          imageUrl: widget.myUser.getUrlFromNameHash(
-                              genderInput: widget.myUser.gender),
+                          phone: reviewee.phone,
+                          name: myUser.name,
+                          imageUrl: myUser.getUrlFromNameHash(
+                              genderInput: myUser.gender),
                           reviewText: this.reviewText,
                           rating: this.revRating,
                         );
-                        widget.db.createReviewModel(review);
-                        await widget.db
-                            .updateRideToFinished(widget.ride, widget.reviewee);
+                        db.createReviewModel(review);
+                        await db.updateRideToFinished(ride, reviewee);
                         //TODO delete the Ride from the public list . It's over..
                         //db.deleteRideModel(ride);
                         //navigate to ridescreen
@@ -162,7 +147,7 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
                           context,
                           MaterialPageRoute(
                             builder: (context) =>
-                                MyApp(db: widget.db, selectedIndex: 1),
+                                MyApp(db: db, selectedIndex: 1),
                           ),
                         );
                       }
@@ -171,9 +156,11 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
                       "SUBMIT",
                       style: TextStyle(color: Colors.white),
                     ),
-                    // shape: RoundedRectangleBorder(
-                    //     borderRadius: BorderRadius.circular(30.0)),
-                    // color: darkBlueColor,
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0)),
+                      backgroundColor: darkBlueColor,
+                    ),
                   ),
                 ),
               ],

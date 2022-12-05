@@ -69,7 +69,7 @@
 46        android:label="HopIn" >
 47        <meta-data
 48            android:name="com.google.android.geo.API_KEY"
-49            android:value="AIzaSyBmrYhVUtVcKX7z55kfqZ5hBrWzF8XQzYs" />
+49            android:value="AIzaSyCxMyTrtIYIDw27UbQHKpjbVNlPqGjHR88" />
 50
 51        <activity
 52            android:name="com.example.flutter_app.MainActivity"
