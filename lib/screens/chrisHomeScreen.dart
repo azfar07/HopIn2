@@ -188,7 +188,7 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
               icon: IconData(0xe55f, fontFamily: 'MaterialIcons'),
               iconColor: clr,
               // The position used to give better recommendations. In this case we are using the user position
-              location: LatLng(37.9931036, 23.7301123),
+              location: LatLng(33.6844, 73.0479),
               radius: 30000,
               onSelected: (Place place) async {
                 final geolocation = await place.geolocation;
