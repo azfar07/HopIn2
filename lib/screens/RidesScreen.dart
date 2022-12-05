@@ -6,6 +6,7 @@ import 'package:flutter_app/screens/MyApp.dart';
 import 'package:flutter_app/screens/ProfileScreen.dart';
 import 'package:flutter_app/screens/ReviewsScreen.dart';
 import 'package:flutter_app/services/DataBase.dart';
+import 'package:flutter_app/services/themes.dart';
 import 'package:flutter_app/widgets/ReviewCard.dart';
 import 'package:flutter_app/models/ReviewModel.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -311,26 +312,10 @@ class _RidesScreenState extends State<RidesScreen> {
     this.completedList = [];
     organizeUserRidesInCategories(userRides, context);
     return MaterialApp(
-      title: 'ShareMyRide',
-      theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white,
-        primaryColor: darkBlueColor,
-        //cardColor: lightGreyBackground,
-        textTheme: TextTheme(
-          bodyText1: TextStyle(
-            color: darkBlueColor,
-            fontFamily: 'fira',
-            fontSize: 12.0,
-          ),
-          subtitle1: TextStyle(
-            color: darkBlueColor,
-            fontFamily: 'fira',
-            fontSize: 16.0,
-          ),
-        ),
-        colorScheme:
-            ColorScheme.fromSwatch().copyWith(secondary: lightBlueColor),
-      ),
+      title: 'HopIn',
+      themeMode: ThemeMode.system,
+      theme: themes.lighttheme,
+      darkTheme: themes.darktheme,
       home: Scaffold(
         floatingActionButton: FloatingActionButton(
           onPressed: () {

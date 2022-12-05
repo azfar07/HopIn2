@@ -4,6 +4,7 @@ import 'package:flutter_app/models/UserModel.dart';
 import 'package:flutter_app/models/UserRide.dart';
 import 'package:flutter_app/screens/MyApp.dart';
 import 'package:flutter_app/services/DataBase.dart';
+import 'package:flutter_app/services/themes.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:toast/toast.dart';
 
@@ -30,25 +31,10 @@ class ReviewsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'ShareMyRide',
-      theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white,
-        primaryColor: darkBlueColor,
-        accentColor: lightBlueColor,
-        //cardColor: lightGreyBackground,
-        textTheme: TextTheme(
-          bodyText1: TextStyle(
-            color: darkBlueColor,
-            fontFamily: 'fira',
-            fontSize: 12.0,
-          ),
-          subtitle1: TextStyle(
-            color: darkBlueColor,
-            fontFamily: 'fira',
-            fontSize: 16.0,
-          ),
-        ),
-      ),
+      title: 'HopIn',
+      themeMode: ThemeMode.system,
+      theme: themes.lighttheme,
+      darkTheme: themes.darktheme,
       home: Scaffold(
         body: SafeArea(
           child: SingleChildScrollView(

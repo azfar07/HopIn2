@@ -3,6 +3,7 @@ import 'package:flutter_app/services/DataBase.dart';
 import 'package:flutter_app/models/ReviewModel.dart';
 import 'package:flutter_app/models/UserModel.dart';
 import 'package:flutter_app/screens/ProfileEditScreen.dart';
+import 'package:flutter_app/services/themes.dart';
 import 'package:flutter_app/widgets/ReviewCard.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -82,26 +83,10 @@ class ProfileScreen extends StatelessWidget {
         UserModel userModel, Future<List<ReviewModel>> futureReviews) {
       //addReviewCards(reviews);
       return MaterialApp(
-        title: 'ShareMyRide',
-        theme: ThemeData(
-          scaffoldBackgroundColor: Colors.white,
-          primaryColor: darkBlueColor,
-          //cardColor: lightGreyBackground,
-          textTheme: TextTheme(
-            bodyText1: TextStyle(
-              color: darkBlueColor,
-              fontFamily: 'fira',
-              fontSize: 14.0,
-            ),
-            subtitle1: TextStyle(
-              color: darkBlueColor,
-              fontFamily: 'fira',
-              fontSize: 16.0,
-            ),
-          ),
-          colorScheme:
-              ColorScheme.fromSwatch().copyWith(secondary: lightBlueColor),
-        ),
+        title: 'HopIn',
+        themeMode: ThemeMode.system,
+        theme: themes.lighttheme,
+        darkTheme: themes.darktheme,
         home: Scaffold(
           body: SafeArea(
             child: SingleChildScrollView(

@@ -7,6 +7,7 @@ import 'package:flutter_app/screens/MyApp.dart';
 import 'package:flutter_app/screens/ProfileScreen.dart';
 import 'package:flutter_app/services/DataBase.dart';
 import 'package:flutter_app/services/fakeDB.dart';
+import 'package:flutter_app/services/themes.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:toast/toast.dart';
 
@@ -145,17 +146,10 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'ShareMyRide',
-      theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white,
-        primaryColor: darkBlueColor,
-        //cardColor: lightGreyBackground,
-        textTheme: TextTheme(
-          bodyText1: TextStyle(color: Color.fromRGBO(26, 26, 48, 1.0)),
-        ),
-        colorScheme:
-            ColorScheme.fromSwatch().copyWith(secondary: lightBlueColor),
-      ),
+      title: 'HopIn',
+      themeMode: ThemeMode.system,
+      theme: themes.lighttheme,
+      darkTheme: themes.darktheme,
       home: Scaffold(
         body: SafeArea(
           child: SingleChildScrollView(

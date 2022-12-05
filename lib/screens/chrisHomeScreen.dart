@@ -5,6 +5,7 @@ import 'package:flutter_app/models/RidesModel.dart';
 import 'package:flutter_app/models/SearchModel.dart';
 import 'package:flutter_app/models/UserModel.dart';
 import 'package:flutter_app/models/UserRide.dart';
+import 'package:flutter_app/services/themes.dart';
 import 'package:geocoder2/geocoder2.dart';
 import 'package:geoflutterfire2/geoflutterfire2.dart';
 import 'dart:async';
@@ -113,7 +114,11 @@ class _HomeScreenState extends State<ChrisHomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return homeScaffold();
+    return MaterialApp(
+        themeMode: ThemeMode.system,
+        theme: themes.lighttheme,
+        darkTheme: themes.darktheme,
+        home: homeScaffold());
   }
 
   Widget homeScaffold() {

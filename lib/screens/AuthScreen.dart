@@ -3,6 +3,7 @@ import 'package:flutter_app/screens/LoginScreen.dart';
 import 'package:flutter_app/screens/MyApp.dart';
 import 'package:flutter_app/services/Authenticator.dart';
 import 'package:flutter_app/services/DataBase.dart';
+import 'package:flutter_app/services/themes.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class AuthScreen extends StatefulWidget {
@@ -62,12 +63,25 @@ class _AuthScreenState extends State<AuthScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SpinKitPumpingHeart(
-          color: Colors.redAccent,
-          size: 100.0,
-        ),
+    return MaterialApp(
+      themeMode: ThemeMode.system,
+      theme: themes.lighttheme,
+      darkTheme: themes.darktheme,
+      home: Scaffold(
+        body: Center(
+            child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'HopIn',
+              style: TextStyle(fontSize: 35),
+            ),
+            Text(
+              'Traveling made easy!',
+              style: TextStyle(fontSize: 30, color: Colors.redAccent),
+            )
+          ],
+        )),
       ),
     );
   }

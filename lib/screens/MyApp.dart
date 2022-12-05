@@ -8,6 +8,7 @@ import 'package:flutter_app/services/DataBase.dart';
 import 'package:flutter_app/services/fakeDB.dart';
 
 import 'package:flutter_app/screens/chrisHomeScreen.dart';
+import 'package:flutter_app/services/themes.dart';
 
 class MyApp extends StatefulWidget {
   final DataBase db;
@@ -70,14 +71,9 @@ class _MyAppState extends State<MyApp> {
         return SystemNavigator.pop();
       },
       child: MaterialApp(
-        theme: ThemeData(
-          fontFamily: 'fira',
-          textTheme: TextTheme(
-            bodyText1: TextStyle(
-              fontFamily: 'fira',
-            ),
-          ),
-        ),
+        themeMode: ThemeMode.system,
+        theme: themes.lighttheme,
+        darkTheme: themes.darktheme,
         home: Scaffold(
           bottomNavigationBar: BottomNavigationBar(
             items: const <BottomNavigationBarItem>[

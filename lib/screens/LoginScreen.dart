@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/screens/MyApp.dart';
 import 'package:flutter_app/screens/ProfileEditScreen.dart';
 import 'package:flutter_app/services/DataBase.dart';
+import 'package:flutter_app/services/themes.dart';
 
 class LoginScreen extends StatelessWidget {
   final DataBase db;
@@ -14,17 +15,10 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'ShareMyRide',
-        theme: ThemeData(
-          scaffoldBackgroundColor: Colors.white,
-          primaryColor: darkBlueColor,
-          //cardColor: lightGreyBackground,
-          textTheme: TextTheme(
-            bodyText1: TextStyle(color: Color.fromRGBO(26, 26, 48, 1.0)),
-          ),
-          colorScheme:
-              ColorScheme.fromSwatch().copyWith(secondary: lightBlueColor),
-        ),
+        title: 'HopIn',
+        themeMode: ThemeMode.system,
+        theme: themes.lighttheme,
+        darkTheme: themes.darktheme,
         home: Scaffold(
           body: SafeArea(
             child: SafeArea(
