@@ -15,7 +15,7 @@ void main() async {
   HttpOverrides.global = MyHttpOverrides();
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-
+  await requestpermissions();
   runApp(Welcome());
 }
 
@@ -36,4 +36,16 @@ class MyHttpOverrides extends HttpOverrides {
       ..badCertificateCallback =
           (X509Certificate cert, String host, int port) => true;
   }
+}
+
+requestpermissions() async {
+  var status = await Permission.location.status;
+  if (status.isGranted) {
+  } else if (status.isDenied) {
+    if (await Permission.location.request().isGranted) {
+      print('.......permission granted');
+    }
+  } else if (status.isPermanentlyDenied) {
+    await openAppSettings();
+  } else {}
 }
